@@ -1,2 +1,0 @@
-# learningPHP
-aprendiendo PHP
