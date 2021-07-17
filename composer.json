@@ -1,0 +1,15 @@
+{
+    "name": "jsamweb/text",
+    "autoload": 
+    {
+        "psr-4": 
+        {
+            "text\\": "src/"
+        },
+        "files": 
+        [
+            "src/helpers.php"
+        ]
+    }
+    
+}

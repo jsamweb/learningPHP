@@ -1,0 +1,5 @@
+#ignorar la carpeta dashboard
+/dashboard
+/xampp
+/webalizer
+/favicon.ico
