@@ -1,0 +1,10 @@
+// siempre el archivo .json se empieza con commillas y nunca debe llevar comentarios, por lo que se debe escribir de la forma mas comprensible y facil de leer
+{
+    "name" : "jsamweb",
+    "description" : "prueba de introduccion a json",
+    "courses" : {
+        "advanced" : ["PHP", "vuejs"],
+        "basic" : ["JSON", "HTML"]
+    },
+    "example" : true //las acciones son muy  similares a javascript, como valores null, booleanos, etc etc.
+}
