@@ -1,36 +1,27 @@
 <?php
 
-// echo "esto es un texto";
+// $data = "estudio PHP";
+// echo $data[0];
 
-// $name = "Jesusito";
+// $post = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem aut dolores soluta eaque impedit consequuntur dolore architecto neque ab repellendus, animi at facere eius, sunt autem provident optio nemo eum!";
+// $extract = substr($post, 0, 60);
 
-// echo "mi nombre es $name";
+// echo "$extract... [chupapimuñaño]";
 
-// $courses = [
-//     "backend" => [
-//         "php",
-//         "laravel"
-//     ]
-// ];
+//pasar de un string a un array
+$data = "javas, php, elguebo, chapulin"; //campo tags
+$tags = explode(",", $data); //array
+echo "<pre>";
+var_dump($tags);
 
-// class Clase
-// {
-//     public $name = "sebistron";
-// }
+//pasasr de un array a un string
+$courses = ["javas", "guebo","xyz"];
+echo implode(",", $courses);
 
-// $objeto = new Clase;
 
-// echo "$objeto->name quiere aprender {$courses["backend"][0]}";
+//example real
 
-// $xyz = "primera";
-// $variableSecundaria = "segundo";
-// echo "$xyz es ${$xyz}";
-
-function getXyz()
-{
-    return "groseria";
-}
-
-$groseria = "que es esto";
-
-echo "${getXyz()} enseña el bowe";
+$course = "   course de PHP   ";
+$course = trim($course);
+echo "<pre>";
+echo "quiero aprender $course , sdnfoisdjfposd";
