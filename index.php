@@ -1,30 +1,28 @@
 <?php
-//clase de closure
+//clase de array simple
 
-echo "<h1>Closure</h1>";
+echo "<h1>Array Simple</h1>";
 echo "---------------";
 echo "<br>";
-//Función Anonima 
+#Array
+//Es aquel elemento que no identificamos de manera directa.
+#Array Simple
+//Es aquel que no le hemos definido un Key o clave
+$course = [
+	'javascrip', 
+	'laravel', 
+	'php', 
+	'vue'
+];
+echo '<pre>';
+var_dump($course);
 
-/*
-$greet = function ($name){ //Variable que requiere lógica
-	return "<h1>Hola, $name</h1>"; 
-};
-
-echo greet('Danny');
-*/
-
-function greet(Closure $lang, $name){
-	return $lang($name);
-}
-
-$es = function ($name){
-	return "Hola, $name";
-};
-
-$en = function ($name){
-	return "Hello, $name";
-};
-
-echo greet($es, 'Danny');
-echo "<br>";
+//Array con Key o clave definida 
+$courses = [
+	'javascrip', 
+	'laravel', 
+	10 =>'php', 
+	'vue'
+];
+echo '<pre>';
+var_dump($courses);
