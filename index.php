@@ -1,23 +1,30 @@
 <?php
+//clase de closure
 
-echo "<h1>Return</h1>";
+echo "<h1>Closure</h1>";
 echo "---------------";
-//Forma parte de cualquier función
-//Necesitamos Return precisamente para devolver y entregar con éxito lo que has procesado anteriormente
+echo "<br>";
+//Función Anonima 
 
-function greet(){
-	return "<h1>Hola</h1>"; 
+/*
+$greet = function ($name){ //Variable que requiere lógica
+	return "<h1>Hola, $name</h1>"; 
+};
+
+echo greet('Danny');
+*/
+
+function greet(Closure $lang, $name){
+	return $lang($name);
 }
 
-echo greet();
+$es = function ($name){
+	return "Hola, $name";
+};
 
+$en = function ($name){
+	return "Hello, $name";
+};
 
-//Para retornar mas de un valor o elemento utilizamos un array
-function greet1(){
-	return ['PDF', 'Laravel']; 
-}
-
-var_dump(greet1());
-
-exit(); //detiene la ejecución del sistema
-return; //retorna
+echo greet($es, 'Danny');
+echo "<br>";
