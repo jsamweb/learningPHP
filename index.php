@@ -1,31 +1,23 @@
 <?php
 
-// // forma basica de trabajar con valores
-//  function greet($name)
-// {
-//     return "hola, $name";
-// }
+echo "<h1>Return</h1>";
+echo "---------------";
+//Forma parte de cualquier función
+//Necesitamos Return precisamente para devolver y entregar con éxito lo que has procesado anteriormente
 
-// echo greet("sebas");
-
-// //referencias
-// $course = "PHP";
-// function path(&$course)
-// {
-//     $course = "laravel";
-//     echo $course; //laravel
-// }
-
-// path($course);
-// echo $course; //laravel
-
-
-//predeterminado
-function greet($name = "sebas")
-{
-    return "Hola, $name";
+function greet(){
+	return "<h1>Hola</h1>"; 
 }
 
-echo greet(); // de esta manera saldria el nombre predetermiando en la funcion
-echo greet("perro"); //de esta manera se modifica el nombre interno de la funcion
+echo greet();
 
+
+//Para retornar mas de un valor o elemento utilizamos un array
+function greet1(){
+	return ['PDF', 'Laravel']; 
+}
+
+var_dump(greet1());
+
+exit(); //detiene la ejecución del sistema
+return; //retorna
