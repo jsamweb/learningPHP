@@ -1,28 +1,52 @@
 <?php
-//clase de array simple
+//clase de array complejo
 
-echo "<h1>Array Simple</h1>";
-echo "---------------";
-echo "<br>";
-#Array
-//Es aquel elemento que no identificamos de manera directa.
-#Array Simple
-//Es aquel que no le hemos definido un Key o clave
-$course = [
-	'javascrip', 
-	'laravel', 
-	'php', 
-	'vue'
-];
-echo '<pre>';
-var_dump($course);
 
-//Array con Key o clave definida 
 $courses = [
-	'javascrip', 
-	'laravel', 
-	10 =>'php', 
-	'vue'
+	'frontend' => 'javascript', 
+	'framework' => 'laravel', 
+	'backend' => 'php'
 ];
+
 echo '<pre>';
 var_dump($courses);
+
+echo "<br>";
+
+foreach ($courses as $key => $value){
+	echo "$key: $value <br>";
+}
+
+echo "<br>";
+
+$contador = 1;
+foreach ($courses as $course){
+	echo "$contador.- $course <br>";
+	$contador++; 
+}
+
+echo "<br>";
+function upper($course){
+	echo strtoupper("$course <br>");
+}
+
+array_walk($courses, 'upper');
+
+echo "<br>";
+
+function upper1($course, $key){
+	echo strtoupper($course) . ": $key <br>";
+}
+
+array_walk($courses, 'upper1');
+
+/*	
+	//Existe un Key
+	array_key_exists('frontend', $courses);
+	//Existe un valor
+	in_array('javascript', $courses);
+	//Muestra todos los Key
+	array_keys($courses);
+	//Muestra todos los valores
+	array_values($courses);
+*/
